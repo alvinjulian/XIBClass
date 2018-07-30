@@ -50,7 +50,7 @@ extension SecondViewController: UITableViewDataSource {
 
 extension SecondViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 124
+        return 126
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,7 +60,11 @@ extension SecondViewController: UITableViewDelegate {
         myCell.delegate = self
         
         //Start customize cell View
-        myCell.bgView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+//        myCell.bgView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        myCell.bgView.layer.cornerRadius = 5.0
+        myCell.bgView.layer.borderColor = UIColor.lightGray.cgColor
+        myCell.bgView.layer.borderWidth = 0.5
+        myCell.bgView.layer.shadowColor = UIColor.darkGray.cgColor
         
         
         //Untuk change picture di dalam cellnya

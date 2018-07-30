@@ -84,6 +84,7 @@
 		92A1B16B210EFAF90099A30F /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
+				92A1B176210F1EE60099A30F /* ThirdCell */,
 				92A1B170210EFED90099A30F /* SecondCell */,
 				92A1B16C210EFB150099A30F /* SecondViewController.swift */,
 				92A1B16D210EFB150099A30F /* SecondViewController.xib */,
@@ -98,6 +99,13 @@
 				92A1B172210EFF050099A30F /* SecondCell.xib */,
 			);
 			path = SecondCell;
+			sourceTree = "<group>";
+		};
+		92A1B176210F1EE60099A30F /* ThirdCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
