@@ -24,6 +24,8 @@ class SecondCell: UITableViewCell {
     @IBOutlet weak var btnDecrease: UIButton!
     @IBOutlet weak var productQuantity: UILabel!
     
+    @IBOutlet weak var bgView: UIView!
+    
     weak var delegate: secondCellDelegate?
     
     var qty = 0

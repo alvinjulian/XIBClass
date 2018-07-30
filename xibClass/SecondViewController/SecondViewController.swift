@@ -59,6 +59,10 @@ extension SecondViewController: UITableViewDelegate {
         //Delegate incvrease and decrease function
         myCell.delegate = self
         
+        //Start customize cell View
+        myCell.bgView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        
+        
         //Untuk change picture di dalam cellnya
         if indexPath.row % 2 == 0 {
             myCell.imageProduct.image = #imageLiteral(resourceName: "accelerometer")
