@@ -12,10 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let rootViewController = ViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Initiate window to contain view
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        
+        //Initiate parent view
+        let mainViewController = ViewController()
+        
+        //Embed navigation controller on the controller
+        let navController = UINavigationController(rootViewController: mainViewController)
+        
+        
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
