@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         
         //Call navigation controller to push other view controller
         self.navigationController?.pushViewController(secondVC, animated: true)
+        
+        //Kalau misalkan ga pakai navigation Controller, bisa pakai self.present
+        //self.present(secondVC, animated: true, completion: nil)
     }
     
 }
