@@ -8,6 +8,8 @@
 
 import UIKit
 
+var priceList:[String:Int] = [:]
+
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -60,8 +62,16 @@ extension SecondViewController: UITableViewDelegate {
         //Untuk change picture di dalam cellnya
         if indexPath.row % 2 == 0 {
             myCell.imageProduct.image = #imageLiteral(resourceName: "accelerometer")
+            myCell.productName.text = "Accelerometer"
+            if let name = myCell.productName.text {
+                priceList[name] = 100
+            }
         } else {
             myCell.imageProduct.image = #imageLiteral(resourceName: "microphone")
+            myCell.productName.text = "Microphone"
+            if let name = myCell.productName.text {
+                priceList[name] = 200
+            }
         }
         
         //Kalau misalkan pakai JSON Array

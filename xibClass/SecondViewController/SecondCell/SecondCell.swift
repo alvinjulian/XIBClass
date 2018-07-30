@@ -43,15 +43,31 @@ class SecondCell: UITableViewCell {
         delegate?.increaseQuantityPressed()
         qty += 1
         productQuantity.text = String(qty)
+        
+        if let name = productName.text {
+            if let price = priceList[name] {
+                productPrice.text = "$ \(price*qty).00"
+            }
+        }
     }
     
     @IBAction func decreaseQuantityPressed(_ sender: Any) {
         delegate?.decreaseQuantityPressed()
         if qty <= 0 {
             qty = 0
+            if let name = productName.text {
+                if let price = priceList[name] {
+                    productPrice.text = "$ \(price*qty).00"
+                }
+            }
         } else {
             qty -= 1
             productQuantity.text = String(qty)
+            if let name = productName.text {
+                if let price = priceList[name] {
+                    productPrice.text = "$ \(price*qty).00"
+                }
+            }
         }
     }
 }
