@@ -19,6 +19,8 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "SecondCell", bundle: nil), forCellReuseIdentifier: "globalViewForEveryoneIdentifier")
+        
+        tableView.register(UINib(nibName: "ThirdCell", bundle: nil), forCellReuseIdentifier: "secondLayerIdentifier")
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,42 +52,52 @@ extension SecondViewController: UITableViewDataSource {
 
 extension SecondViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 126
+        if indexPath.row <= 2 {
+            return 126
+        } else {
+            return 330
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = tableView.dequeueReusableCell(withIdentifier: "globalViewForEveryoneIdentifier", for: indexPath) as! SecondCell
-        
-        //Delegate incvrease and decrease function
-        myCell.delegate = self
-        
-        //Start customize cell View
-//        myCell.bgView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        myCell.bgView.layer.cornerRadius = 5.0
-        myCell.bgView.layer.borderColor = UIColor.lightGray.cgColor
-        myCell.bgView.layer.borderWidth = 0.5
-        myCell.bgView.layer.shadowColor = UIColor.darkGray.cgColor
-        
-        
-        //Untuk change picture di dalam cellnya
-        if indexPath.row % 2 == 0 {
-            myCell.imageProduct.image = #imageLiteral(resourceName: "accelerometer")
-            myCell.productName.text = "Accelerometer"
-            if let name = myCell.productName.text {
-                priceList[name] = 100
+        if indexPath.row <= 2 {
+            let myCell = tableView.dequeueReusableCell(withIdentifier: "globalViewForEveryoneIdentifier", for: indexPath) as! SecondCell
+            
+            //Delegate incvrease and decrease function
+            myCell.delegate = self
+            
+            //Start customize cell View
+            //        myCell.bgView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            myCell.bgView.layer.cornerRadius = 5.0
+            myCell.bgView.layer.borderColor = UIColor.lightGray.cgColor
+            myCell.bgView.layer.borderWidth = 0.5
+            myCell.bgView.layer.shadowColor = UIColor.darkGray.cgColor
+            
+            
+            //Untuk change picture di dalam cellnya
+            if indexPath.row % 2 == 0 {
+                myCell.imageProduct.image = #imageLiteral(resourceName: "accelerometer")
+                myCell.productName.text = "Accelerometer"
+                if let name = myCell.productName.text {
+                    priceList[name] = 100
+                }
+            } else {
+                myCell.imageProduct.image = #imageLiteral(resourceName: "microphone")
+                myCell.productName.text = "Microphone"
+                if let name = myCell.productName.text {
+                    priceList[name] = 200
+                }
             }
+            
+            //Kalau misalkan pakai JSON Array
+            //indexPath.row[myJson.name] <-- nyari keynya si JSON dan start dari 0
+            
+            return myCell
         } else {
-            myCell.imageProduct.image = #imageLiteral(resourceName: "microphone")
-            myCell.productName.text = "Microphone"
-            if let name = myCell.productName.text {
-                priceList[name] = 200
-            }
-        }
-        
-        //Kalau misalkan pakai JSON Array
-        //indexPath.row[myJson.name] <-- nyari keynya si JSON dan start dari 0
-        
-        return myCell
+            let myCell = tableView.dequeueReusableCell(withIdentifier: "secondLayerIdentifier", for: indexPath) as! ThirdCell
+            
+            return myCell
+        }        
     }
 }
 

@@ -16,6 +16,8 @@
 		92A1B16F210EFB150099A30F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A1B16D210EFB150099A30F /* SecondViewController.xib */; };
 		92A1B173210EFF050099A30F /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1B171210EFF050099A30F /* SecondCell.swift */; };
 		92A1B174210EFF050099A30F /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A1B172210EFF050099A30F /* SecondCell.xib */; };
+		92A1B179210F1F570099A30F /* ThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1B177210F1F570099A30F /* ThirdCell.swift */; };
+		92A1B17A210F1F570099A30F /* ThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92A1B178210F1F570099A30F /* ThirdCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		92A1B16D210EFB150099A30F /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		92A1B171210EFF050099A30F /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		92A1B172210EFF050099A30F /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
+		92A1B177210F1F570099A30F /* ThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCell.swift; sourceTree = "<group>"; };
+		92A1B178210F1F570099A30F /* ThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		92A1B176210F1EE60099A30F /* ThirdCell */ = {
 			isa = PBXGroup;
 			children = (
+				92A1B177210F1F570099A30F /* ThirdCell.swift */,
+				92A1B178210F1F570099A30F /* ThirdCell.xib */,
 			);
 			path = ThirdCell;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 				92A1B174210EFF050099A30F /* SecondCell.xib in Resources */,
 				92A1B16F210EFB150099A30F /* SecondViewController.xib in Resources */,
 				92A1B161210EF2D10099A30F /* LaunchScreen.storyboard in Resources */,
+				92A1B17A210F1F570099A30F /* ThirdCell.xib in Resources */,
 				92A1B15E210EF2D10099A30F /* Assets.xcassets in Resources */,
 				92A1B169210EF3750099A30F /* ViewController.xib in Resources */,
 			);
@@ -181,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A1B179210F1F570099A30F /* ThirdCell.swift in Sources */,
 				92A1B16E210EFB150099A30F /* SecondViewController.swift in Sources */,
 				92A1B159210EF2D00099A30F /* ViewController.swift in Sources */,
 				92A1B157210EF2D00099A30F /* AppDelegate.swift in Sources */,
