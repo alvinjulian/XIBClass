@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,16 +12,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="xibClass" customModuleProvider="target">
             <connections>
+                <outlet property="loginTextField" destination="j6Y-2w-lTp" id="P8o-So-g3E"/>
+                <outlet property="submitButton" destination="w9h-BA-43y" id="zmx-f2-sd8"/>
                 <outlet property="view" destination="to5-ae-FcL" id="mQ3-jC-uBt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="to5-ae-FcL">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6Y-2w-lTp">
+                    <rect key="frame" x="46" y="203" width="283" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9h-BA-43y">
+                    <rect key="frame" x="153" y="282" width="68" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="Submit"/>
+                    <connections>
+                        <action selector="submitEditPressed:" destination="-1" eventType="touchUpInside" id="qJM-q0-g3w"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="j6Y-2w-lTp" firstAttribute="centerX" secondItem="0dC-GA-PWc" secondAttribute="centerX" id="1Xq-Nk-Mx3"/>
+                <constraint firstItem="w9h-BA-43y" firstAttribute="top" secondItem="j6Y-2w-lTp" secondAttribute="bottom" constant="49" id="9aS-bd-pom"/>
+                <constraint firstItem="0dC-GA-PWc" firstAttribute="trailing" secondItem="j6Y-2w-lTp" secondAttribute="trailing" constant="46" id="PJZ-RA-ero"/>
+                <constraint firstItem="j6Y-2w-lTp" firstAttribute="top" secondItem="0dC-GA-PWc" secondAttribute="top" constant="159" id="TTi-O3-S7o"/>
+                <constraint firstItem="w9h-BA-43y" firstAttribute="centerX" secondItem="0dC-GA-PWc" secondAttribute="centerX" id="lg3-1h-RuS"/>
+                <constraint firstItem="j6Y-2w-lTp" firstAttribute="leading" secondItem="0dC-GA-PWc" secondAttribute="leading" constant="46" id="wrk-Cg-LZT"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="0dC-GA-PWc"/>
-            <point key="canvasLocation" x="-14" y="42"/>
+            <point key="canvasLocation" x="-14.5" y="41"/>
         </view>
     </objects>
 </document>

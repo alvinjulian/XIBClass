@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func submitEditPressed(_ sender: Any) {
+        //Initiate which controller that we want to navigate
+        let secondVC = SecondViewController()
+        
+        //Call navigation controller to push other view controller
+        self.navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
 }
 
