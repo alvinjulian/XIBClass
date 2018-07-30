@@ -54,14 +54,22 @@
 		92A1B155210EF2D00099A30F /* xibClass */ = {
 			isa = PBXGroup;
 			children = (
+				92A1B16A210EF6B70099A30F /* RootViewController */,
 				92A1B156210EF2D00099A30F /* AppDelegate.swift */,
-				92A1B158210EF2D00099A30F /* ViewController.swift */,
-				92A1B168210EF3750099A30F /* ViewController.xib */,
 				92A1B15D210EF2D10099A30F /* Assets.xcassets */,
 				92A1B15F210EF2D10099A30F /* LaunchScreen.storyboard */,
 				92A1B162210EF2D10099A30F /* Info.plist */,
 			);
 			path = xibClass;
+			sourceTree = "<group>";
+		};
+		92A1B16A210EF6B70099A30F /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92A1B158210EF2D00099A30F /* ViewController.swift */,
+				92A1B168210EF3750099A30F /* ViewController.xib */,
+			);
+			path = RootViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

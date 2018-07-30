@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let rootViewController = ViewController()
+    let rootView = ViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,11 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewController = ViewController()
         
         //Embed navigation controller on the controller
-        let navController = UINavigationController(rootViewController: mainViewController)
+        let navController = UINavigationController(rootViewController: mainViewController) //Optional, kalau butuh navController aja
         
+        //Conneting window to rootViewController
+        window?.rootViewController = navController //Kalau misalkan ga butuh nav, tinggal tempelin mainViewController
         
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
+        //Make window become real and visible
+        window!.makeKeyAndVisible()
         
         return true
     }
