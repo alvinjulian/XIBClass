@@ -47,7 +47,11 @@ class SecondCell: UITableViewCell {
     
     @IBAction func decreaseQuantityPressed(_ sender: Any) {
         delegate?.decreaseQuantityPressed()
-        qty -= 1
-        productQuantity.text = String(qty)
+        if qty <= 0 {
+            qty = 0
+        } else {
+            qty -= 1
+            productQuantity.text = String(qty)
+        }
     }
 }
