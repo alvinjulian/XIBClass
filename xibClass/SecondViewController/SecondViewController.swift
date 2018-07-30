@@ -64,6 +64,9 @@ extension SecondViewController: UITableViewDelegate {
             myCell.imageProduct.image = #imageLiteral(resourceName: "microphone")
         }
         
+        //Kalau misalkan pakai JSON Array
+        //indexPath.row[myJson.name] <-- nyari keynya si JSON dan start dari 0
+        
         return myCell
     }
 }
